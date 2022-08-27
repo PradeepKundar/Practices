@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App=Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        height: 100vh;
+
+        text-align: center;
+        font-weight: bold;
+      }
+
+      nav,
+      menu,
+      main,
+      section,
+      aside {
+        padding: 24px;
+        font-size: 24px;
+      }
+
+      nav {
+        background-color: #63e6be;
+
+        grid-row: 1/-1;
+      }
+      menu {
+        background-color: #0c8599;
+
+        grid-column: 2/-1;
+        display: flex;
+
+        align-items: center;
+      }
+
+      main {
+        background-color: #bac8ff;
+        color: #495057;
+        font-size: 32px;
+      }
+
+      section {
+        background-color: #ced4da;
+
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+        overflow: scroll;
+      }
+
+      .inbox-section {
+        height: 96px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      aside {
+        font-size: 24px;
+        background-color: #ced4da;
+      }
+
+      .menu-list {
+        display: inline-block;
+        border: none;
+        padding: 8px 16px;
+        background-color: #868e96;
+        font-size: 18px;
+        margin: 0 16px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        box-shadow: 0 6px 12px rgb(77, 77, 74);
+      }
+
+      .menu-list:last-child {
+        margin-left: auto;
+        background-color: #f03e3e;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>NAV</nav>
+    <menu>
+      <button class="menu-list">New</button>
+      <button class="menu-list">Reply</button>
+      <button class="menu-list">Forward</button>
+      <button class="menu-list">Mark Unread</button>
+      <button class="menu-list">Trash</button>
+    </menu>
+    <section>
+      <div class="inbox-section">Email 1</div>
+      <div class="inbox-section">Email 2</div>
+      <div class="inbox-section">Email 3</div>
+      <div class="inbox-section">Email 4</div>
+      <div class="inbox-section">Email 5</div>
+      <div class="inbox-section">Email 6</div>
+      <div class="inbox-section">Email 7</div>
+      <div class="inbox-section">Email 8</div>
+      <div class="inbox-section">Email 9</div>
+      <div class="inbox-section">Email 10</div>
+    </section>
+    <main>Email View</main>
+    <aside>Additional Info</aside>
+  </body>
+</html>
